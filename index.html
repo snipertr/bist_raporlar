@@ -30,10 +30,6 @@
       --chip-bg: #1e293b;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
@@ -93,202 +89,16 @@
       color: var(--fg-muted);
     }
 
-    .top-actions {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
     .theme-toggle {
       border-radius: 999px;
       border: 1px solid var(--border);
-      background: rgba(15, 23, 42, 0.02);
       padding: 6px 12px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
       cursor: pointer;
-      font-size: 0.85rem;
+      background: rgba(15,23,42,0.03);
       color: var(--fg-muted);
-    }
-
-    .theme-toggle span.icon {
-      font-size: 1.1rem;
-    }
-
-    .pill {
-      border-radius: 999px;
-      padding: 4px 10px;
-      font-size: 0.75rem;
-      background: var(--accent-soft);
-      color: var(--accent);
-      border: 1px solid rgba(99, 102, 241, 0.25);
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.6fr);
-      gap: 20px;
-      align-items: stretch;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .hero-main {
-      background: var(--bg-alt);
-      border-radius: 18px;
-      padding: 18px 18px 16px;
-      border: 1px solid var(--border);
-      box-shadow: 0 14px 30px var(--card-shadow);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-main::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top right, rgba(129, 140, 248, 0.16), transparent 55%);
-      pointer-events: none;
-    }
-
-    .hero-title-line {
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 8px;
-    }
-
-    .hero-title-line span.dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 12px rgba(34, 197, 94, 0.85);
-    }
-
-    .hero h2 {
-      margin: 0;
-      font-size: 1.4rem;
-    }
-
-    .hero p.lead {
-      margin: 6px 0 12px;
-      font-size: 0.95rem;
-      color: var(--fg-muted);
-    }
-
-    .hero-hints {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 14px;
-    }
-
-    .hint-chip {
-      font-size: 0.78rem;
-      padding: 4px 9px;
-      border-radius: 999px;
-      background: var(--chip-bg);
-      color: var(--fg-muted);
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      display: inline-flex;
       align-items: center;
       gap: 6px;
-      white-space: nowrap;
-    }
-
-    .hint-chip span.dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: #38bdf8;
-    }
-
-    .hero-footer {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin-top: 8px;
-      font-size: 0.8rem;
-      color: var(--fg-muted);
-    }
-
-    .hero-footer span {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .hero-footer strong {
-      color: var(--accent);
-    }
-
-    .hero-quick {
-      background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(236,72,153,0.16));
-      border-radius: 18px;
-      padding: 16px 16px 14px;
-      border: 1px solid rgba(148,163,184,0.35);
-      backdrop-filter: blur(12px);
-      color: #020617;
-    }
-
-    [data-theme="dark"] .hero-quick {
-      color: #e5e7eb;
-    }
-
-    .hero-quick h3 {
-      margin: 0 0 6px;
-      font-size: 1rem;
-    }
-
-    .hero-quick p {
-      margin: 0 0 10px;
-      font-size: 0.85rem;
-    }
-
-    .quick-links {
-      display: grid;
-      gap: 8px;
-    }
-
-    .quick-link {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 8px 10px;
-      border-radius: 10px;
-      background: rgba(15,23,42,0.04);
-      cursor: pointer;
-      text-decoration: none;
-      color: inherit;
-      font-size: 0.85rem;
-      border: 1px solid rgba(148,163,184,0.3);
-    }
-
-    .quick-link span.label {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .quick-link span.badge {
-      font-size: 0.7rem;
-      padding: 2px 6px;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.08);
-    }
-
-    .quick-link:hover {
-      background: rgba(15,23,42,0.08);
     }
 
     .section {
@@ -297,21 +107,8 @@
 
     .section-header {
       display: flex;
-      align-items: baseline;
       justify-content: space-between;
       margin-bottom: 8px;
-      gap: 10px;
-    }
-
-    .section-title {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--fg);
-    }
-
-    .section-subtitle {
-      font-size: 0.8rem;
-      color: var(--fg-muted);
     }
 
     .grid {
@@ -323,7 +120,7 @@
     .card {
       background: var(--bg-alt);
       border-radius: 14px;
-      padding: 12px 12px 10px;
+      padding: 12px;
       border: 1px solid var(--border);
       box-shadow: 0 10px 24px var(--card-shadow);
       display: flex;
@@ -331,25 +128,9 @@
       gap: 6px;
     }
 
-    .card-header-line {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-    }
-
     .card-title {
-      font-size: 0.95rem;
+      font-size: 1rem;
       font-weight: 600;
-    }
-
-    .card-chip {
-      font-size: 0.7rem;
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      white-space: nowrap;
     }
 
     .card-desc {
@@ -357,259 +138,99 @@
       color: var(--fg-muted);
     }
 
-    .card-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 4px;
-      font-size: 0.78rem;
-    }
-
-    .card-meta {
-      color: var(--fg-muted);
-    }
-
-    .card-actions {
-      display: flex;
-      gap: 6px;
-    }
-
     .btn-link {
-      border-radius: 999px;
-      padding: 5px 10px;
-      font-size: 0.78rem;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
       background: var(--accent);
-      color: #f9fafb;
-    }
-
-    .btn-link.secondary {
-      background: transparent;
-      color: var(--fg-muted);
-      border: 1px solid var(--border);
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      text-decoration: none;
+      width: fit-content;
     }
 
     footer {
       margin-top: auto;
-      padding: 10px 16px 16px;
-      font-size: 0.75rem;
+      padding: 14px;
       text-align: center;
+      font-size: 0.75rem;
       color: var(--fg-muted);
     }
   </style>
 </head>
-<body>
 
+<body>
 <div class="page">
 
   <header>
     <div class="brand">
       <div class="logo-circle">DB</div>
       <div class="brand-text">
-        <h1>Analiz Dashboard Giriş</h1>
-        <p>Günlük kullandığın HTML rapor ve araçlara tek noktadan erişim.</p>
+        <h1>Analiz Dashboard</h1>
+        <p>HTML raporlarını tek yerde topla ve hızla aç.</p>
       </div>
     </div>
 
-    <div class="top-actions">
-      <div class="pill">Kullanıcı dostu &middot; Hızlı başlama</div>
-      <button class="theme-toggle" type="button" onclick="toggleTheme()">
-        <span class="icon">🌓</span>
-        <span>Temayı değiştir</span>
-      </button>
-    </div>
+    <button class="theme-toggle" onclick="toggleTheme()">🌓 Tema</button>
   </header>
 
-  <section class="hero">
-    <div class="hero-main">
-      <div class="hero-title-line">
-        <span class="dot"></span>
-        <h2>Hoş geldin, bugün neye bakmak istiyorsun?</h2>
-      </div>
-      <p class="lead">
-        Aşağıdaki panellerden istediğin analiz ekranına hızlıca geç. Her kart bir HTML dosyasına giden
-        güvenli bir giriş kapısı gibi çalışır.
-      </p>
-
-      <div class="hero-hints">
-        <div class="hint-chip">
-          <span class="dot"></span> Kısa açıklamalarla neye tıkladığını gör
-        </div>
-        <div class="hint-chip">
-          <span class="dot"></span> Yeni rapor eklemek için sadece linkleri güncelle
-        </div>
-        <div class="hint-chip">
-          <span class="dot"></span> Mobil ve masaüstü için optimize
-        </div>
-      </div>
-
-      <div class="hero-footer">
-        <span>✅ <strong>İpucu:</strong> Sık kullandığın HTML dosyalarını “Hızlı erişim”e ekleyebilirsin.</span>
-        <span>📂 Tüm linkler yerel / GitHub dosyalarına yönlendirilmek için hazır.</span>
-      </div>
-    </div>
-
-    <aside class="hero-quick">
-      <h3>Hızlı Erişim</h3>
-      <p>En sık kullandığın 3–4 sayfayı buraya yerleştir. Kullanıcı için “tek tıkla aç” alanı gibi düşün.</p>
-
-      <div class="quick-links">
-        <!-- Bu linkleri kendi dosya isimlerinle değiştir -->
-        <a class="quick-link" href="daily_report.html" target="_blank">
-          <span class="label">📊 Günlük Piyasa Özeti</span>
-          <span class="badge">daily_report.html</span>
-        </a>
-
-        <a class="quick-link" href="orderbook_dashboard.html" target="_blank">
-          <span class="label">📈 Order Book Dashboard</span>
-          <span class="badge">orderbook_dashboard.html</span>
-        </a>
-
-        <a class="quick-link" href="macro_overview.html" target="_blank">
-          <span class="label">🌍 Makro Görünüm Paneli</span>
-          <span class="badge">macro_overview.html</span>
-        </a>
-      </div>
-    </aside>
-  </section>
-
-  <!-- BÖLÜM 1: Ana Analiz Panelleri -->
+  <!-- ANA PANEL -->
   <section class="section">
     <div class="section-header">
-      <div class="section-title">Ana Analiz Panelleri</div>
-      <div class="section-subtitle">En kritik HTML dashboard ve raporların.</div>
+      <div class="section-title">Raporlar ve Dashboardlar</div>
     </div>
 
     <div class="grid">
-      <!-- Kart 1 -->
+
+      <!-- Örnek kartlar -->
       <article class="card">
-        <div class="card-header-line">
-          <div class="card-title">Hisse Senedi Analiz Paneli</div>
-          <div class="card-chip">core</div>
-        </div>
-        <p class="card-desc">
-          Hisse bazlı performans, korelasyon ve kurum davranışlarını izlediğin ana panel.
-        </p>
-        <div class="card-footer">
-          <span class="card-meta">Dosya: <strong>stocks_dashboard.html</strong></span>
-          <div class="card-actions">
-            <a class="btn-link" href="stocks_dashboard.html" target="_blank">
-              Aç
-            </a>
-          </div>
-        </div>
+        <div class="card-title">Hisse Analiz Paneli</div>
+        <p class="card-desc">Fiyat, kurum, derinlik ve uyum analizleri.</p>
+        <a class="btn-link" href="stocks_dashboard.html" target="_blank">Aç</a>
       </article>
 
-      <!-- Kart 2 -->
       <article class="card">
-        <div class="card-header-line">
-          <div class="card-title">Kurumsal Gruplama Raporu</div>
-          <div class="card-chip">analysis</div>
-        </div>
-        <p class="card-desc">
-          Kurumlar arası korelasyon, grup yapıları ve alış-satış uyumunu takip ettiğin ayrıntılı rapor.
-        </p>
-        <div class="card-footer">
-          <span class="card-meta">Dosya: <strong>kurumsal_gruplama.html</strong></span>
-          <div class="card-actions">
-            <a class="btn-link" href="kurumsal_gruplama.html" target="_blank">Aç</a>
-          </div>
-        </div>
+        <div class="card-title">Makro / EVDS Dashboard</div>
+        <p class="card-desc">EVDS ile ekonomik görünüm.</p>
+        <a class="btn-link" href="evds_macro_dashboard.html" target="_blank">Aç</a>
       </article>
 
-      <!-- Kart 3 -->
       <article class="card">
-        <div class="card-header-line">
-          <div class="card-title">Makro & EVDS Görünüm</div>
-          <div class="card-chip">macro</div>
-        </div>
-        <p class="card-desc">
-          EVDS ve diğer makro veri setlerine dayalı genel görünümü tek ekranda özetleyen panel.
-        </p>
-        <div class="card-footer">
-          <span class="card-meta">Dosya: <strong>evds_macro_dashboard.html</strong></span>
-          <div class="card-actions">
-            <a class="btn-link" href="evds_macro_dashboard.html" target="_blank">Aç</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- BÖLÜM 2: Araçlar ve Yardımcı Sayfalar -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-title">Araçlar & Yardımcı Sayfalar</div>
-      <div class="section-subtitle">Test sayfaları, prototipler ve küçük yardımcı araçlar.</div>
-    </div>
-
-    <div class="grid">
-      <!-- Kart 4 -->
-      <article class="card">
-        <div class="card-header-line">
-          <div class="card-title">Test / Deneme Paneli</div>
-          <div class="card-chip">utility</div>
-        </div>
-        <p class="card-desc">
-          Yeni grafikler, layout ve bileşen denemeleri için kullandığın sandbox alanı.
-        </p>
-        <div class="card-footer">
-          <span class="card-meta">Dosya: <strong>playground.html</strong></span>
-          <div class="card-actions">
-            <a class="btn-link secondary" href="playground.html" target="_blank">Aç</a>
-          </div>
-        </div>
+        <div class="card-title">Kurumsal Gruplama</div>
+        <p class="card-desc">Kurum korelasyon ve davranış ilişkileri.</p>
+        <a class="btn-link" href="kurumsal_gruplama.html" target="_blank">Aç</a>
       </article>
 
-      <!-- Kart 5 -->
+      <!-- ✔ SENİN DOSYAN: ADGYO RAPORU -->
       <article class="card">
-        <div class="card-header-line">
-          <div class="card-title">Dokümantasyon / Notlar</div>
-          <div class="card-chip">docs</div>
-        </div>
+        <div class="card-title">ADGYO Analiz Raporu</div>
         <p class="card-desc">
-          Kullanım notları, metodoloji açıklamaları ve proje dokümantasyonu için düz HTML sayfa.
+          27 Kasım 2025 tarihli otomatik analiz çıktısı.
         </p>
-        <div class="card-footer">
-          <span class="card-meta">Dosya: <strong>docs.html</strong></span>
-          <div class="card-actions">
-            <a class="btn-link secondary" href="docs.html" target="_blank">Aç</a>
-          </div>
-        </div>
+        <a class="btn-link" href="analiz_raporu_ADGYO_20251127_213528.html" target="_blank">
+          Raporu Aç
+        </a>
       </article>
+
     </div>
   </section>
 
 </div>
 
 <footer>
-  Bu sayfa sadece giriş kapısı: HTML dosya isimlerini yukarıdaki linklere göre güncellemen yeterli.
+  Yeni HTML dosyaları eklemek için yalnızca bu dosyaya link kartı eklemen yeterli.
 </footer>
 
 <script>
-  // Basit tema toggling
   function toggleTheme() {
     const current = document.documentElement.getAttribute("data-theme") || "light";
-    const next = current === "dark" ? "light" : "dark";
+    const next = current === "light" ? "dark" : "light";
     document.documentElement.setAttribute("data-theme", next);
-    try {
-      localStorage.setItem("dashboard-theme", next);
-    } catch (e) {}
+    localStorage.setItem("theme", next);
   }
 
-  // Sayfa yüklenince tercih edilen temayı yükle
-  (function initTheme() {
-    try {
-      const saved = localStorage.getItem("dashboard-theme");
-      if (saved) {
-        document.documentElement.setAttribute("data-theme", saved);
-      }
-    } catch (e) {}
+  (function loadTheme() {
+    const saved = localStorage.getItem("theme");
+    if (saved) document.documentElement.setAttribute("data-theme", saved);
   })();
 </script>
 
